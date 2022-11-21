@@ -1,5 +1,0 @@
-{
-  "yaml.schemas": {
-    "https://json.schemastore.org/deployed.json": "file:///e%3A/DevProjects/VSCode/rxlive/vite-vue-starter/.github/workflows/deploy.yml"
-  }
-}
