@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "baseUrl": "./src",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "skipDefaultLibCheck": true,
+    "types": ["naive-ui/volar"],
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "~": ["./"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "mock/typings/index.d.ts"
+  ],
+  "exclude": ["node_modules", "assets"]
+}
