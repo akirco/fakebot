@@ -1,6 +1,6 @@
 import { defineConfig } from 'windicss/helpers'
 
-import { colors } from './configs.json'
+import { colors } from './src/settings/configs.json'
 
 export default defineConfig({
   content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.tsx'],

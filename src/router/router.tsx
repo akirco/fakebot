@@ -7,11 +7,10 @@ import {
 } from 'vue-router'
 import UilTachometerFast from '~icons/uil/tachometer-fast'
 
-import SetupLayout from '../layouts/setup-view.vue'
-import { SidebarLayout } from '../layouts/sidebar'
+import { RouteName } from '~/enum'
+import HomeView from '~/views/home/index.vue'
+
 import DashBoardView from '../views/dashboard'
-import LoginView from '../views/login/index.vue'
-import { RouteName } from './name'
 
 export const routeForMenu: Array<RouteRecordRaw> = [
   {
@@ -34,29 +33,28 @@ export const router = createRouter({
   routes: [
     {
       path: '/',
-      component: SidebarLayout,
+      component: HomeView,
       name: RouteName.Home,
       redirect: '/dashboard',
       children: [...routeForMenu],
     },
-
-    {
-      component: SetupLayout,
-      path: '/',
-      children: [
-        {
-          path: '/setup-api',
-          meta: { isPublic: true, title: '设置接口地址' },
-          component: () => import('../views/setup/setup-api'),
-        },
-        {
-          path: '/login',
-          name: RouteName.Login,
-          meta: { isPublic: true, title: '登陆' },
-          component: LoginView,
-        },
-      ],
-    },
+    // {
+    //   component: SetupLayout,
+    //   path: '/',
+    //   children: [
+    //     {
+    //       path: '/setup-api',
+    //       meta: { isPublic: true, title: '设置接口地址' },
+    //       component: () => import('../views/setup/setup-api'),
+    //     },
+    //     {
+    //       path: '/login',
+    //       name: RouteName.Login,
+    //       meta: { isPublic: true, title: '登陆' },
+    //       component: LoginView,
+    //     },
+    //   ],
+    // },
 
     {
       path: '/:pathMatch(.*)*',

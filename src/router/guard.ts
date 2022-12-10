@@ -3,6 +3,7 @@ import QProgress from 'qier-progress'
 
 import { configs } from '~/settings'
 import { getToken } from '~/utils'
+import { getViews } from '~/utils/router/components'
 
 import { router } from './router'
 
@@ -34,6 +35,7 @@ router.beforeEach(async (to) => {
 })
 
 router.afterEach((to, _) => {
+  getViews()
   document.title = getPageTitle(to?.meta.title as any)
   progress.finish()
 })

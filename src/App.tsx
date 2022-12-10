@@ -1,4 +1,3 @@
-import { configs } from '~/settings'
 import type { GlobalThemeOverrides } from 'naive-ui'
 import {
   NConfigProvider,
@@ -12,6 +11,8 @@ import {
 } from 'naive-ui'
 import { defineComponent, onMounted } from 'vue'
 import { RouterView } from 'vue-router'
+
+import { configs } from '~/settings'
 
 import { useStoreRef } from './hooks/use-store-ref'
 import { useUserStore } from './stores/auth/user'

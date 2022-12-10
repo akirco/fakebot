@@ -5,8 +5,8 @@ import { computed, defineComponent, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import Hamburger from '~icons/material-symbols/menu'
 
-import { configs } from '~/settings'
 import { useStoreRef } from '~/hooks/use-store-ref'
+import { configs } from '~/settings'
 import { useUserStore } from '~/stores/auth/user'
 
 import type { MenuModel } from '../../utils/build-menus'

@@ -5,9 +5,9 @@ import { useRouter } from 'vue-router'
 
 import Avatar from '../../components/avatar/index.vue'
 import ParallaxButtonVue from '../../components/button/parallax-button.vue'
-import { configs } from '../../settings'
 import { useStoreRef } from '../../hooks/use-store-ref'
 import type { UserModel } from '../../models/user'
+import { configs } from '../../settings'
 import { useUserStore } from '../../stores/auth/user'
 import { RESTManager } from '../../utils/rest'
 
